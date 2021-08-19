@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +7,8 @@
 }
 body{
     background: #212529;
+    font-size: 16px;
+    font-family: 'Prompt', sans-serif;
 }
 
 .center {
@@ -44,3 +48,4 @@ footer{
     line-height: 28px;
     font-size: 14px;
 }
+
