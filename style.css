@@ -126,15 +126,5 @@ footer{
   width: 100%;
   position: fixed;
   z-index: 100;
-  animation: fadeOut 3s;
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  
-  to {
-    opacity: 0;
-  }
+  opacity: 99%;
 }
