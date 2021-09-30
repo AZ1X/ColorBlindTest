@@ -12,6 +12,11 @@
 
 <body>
   
+<div id="preloader">
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/1D5cxbDbKMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/1D5cxbDbKMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -201,6 +206,15 @@
 </section>
 
   <script src="js/bootstrap.min.js"></script>
+    <script>
+    
+    var loader = document.getElementById("preloader");
+    
+    window.addEventListener("load", function(){
+      loader.style.display = "none";
+    })
+    
+  </script>
  
 </body>
 </html>
