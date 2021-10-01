@@ -1,79 +1,17 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
-<script language="JavaScript">
-
-
-
-<!-- Begin
-// ใส่จำนวนข้อของแบบทดสอบ (ถ้าจะเพิ่มข้อต้องแก้ที่ตัวเลขด้านล่างด้วย)
-var numQues = 12;
-
-// ใส่จำนวนตัวเลือกใน 1 ข้อ (ถ้าจะเพิ่มจำนวนตัวเลือกต้องแก้ที่ตัวเลขด้านล่างด้วย)
-var numChoi = 4;
-
-var answers = new Array(5);
-
-// ใส่คำตอบที่ถูกต้องด้านล่างนี้ (เวลาจะเฉลยข้อไหน ก็เอาคำตอบมาใส่ข้างล่างนี้เลย)
-// ถ้าเพิ่มจำนวนข้อ บรรทัดด้านล่างต้องเพิ่มเข้าด้วย โดยตัวเลขหลัง answer คือเลขประจำข้อ เช่น ถ้าข้อ 1 ใส่ 0 , ข้อ 2 ใส่ 1 , ข้อ 3 ใส่ 2
-
-answers[0] = "7";
-answers[1] = "6";
-answers[2] = "26";
-answers[3] = "15";
-answers[4] = "6";
-answers[5] = "73";
-answers[6] = "5";
-answers[7] = "16";
-answers[8] = "45";
-answers[9] = "12";
-answers[10] = "29";
-answers[11] = "8";
-
-// Do not change anything below here ...
-function getScore(form) {
-  var score = 0;
-  var currElt;
-  var currSelection;
-  for (i=0; i<numQues; i++) {
-    currElt = i*numChoi;
-    for (j=0; j<numChoi; j++) {
-      currSelection = form.elements[currElt + j];
-      if (currSelection.checked) {
-        if (currSelection.value == answers[i]) {
-          score++;
-          break;
-        }
-      }
-    }
-  }
-  score = Math.round(score/numQues*100);
-  form.percentage.value = score + "%";
-  var correctAnswers = "";
-  for (i=1; i<=numQues; i++) {
-    correctAnswers += i + ".  " + answers[i-1] + "\r\n";
-  }
-  form.solutions.value = correctAnswers;
-}
-//  End -->
-</script>
-
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
- <title>Color blind test website</title>
- <link rel="stylesheet" href="css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizz App</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="style.css">
- 
- 
  
 </head>
 
 <body>
-  
-  
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -85,12 +23,6 @@ function getScore(form) {
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="index.html">หน้าหลัก</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="Test.html">แบบทดสอบ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="from.html">ประเมินเว็บไซต์</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">การมองเห็นของคนตาบอดสี
@@ -111,6 +43,12 @@ function getScore(form) {
           </ul>
         </li>
         <li class="nav-item">
+          <a class="nav-link " href="Test.html">แบบทดสอบ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="from.html">ประเมินเว็บไซต์</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#p-1">เกี่ยวกับ</a>
         </li>
       </ul>
@@ -118,233 +56,305 @@ function getScore(form) {
   </div>
 </nav>
 
-
-<form name="quiz">
-<div class="shadow p-4  mb-1 bg-body rounded  ">
-<div class="card  ">
-  <div class="card-body bg-dark " style="color: white">
-    <h4 class="fw-bold card-title">แบบทดสอบ</h4>
-    <p class="fs-6 card-text">ตอบคำถามเพื่อหาเปอร์เซ็นต์ความเสี่ยงเป็นโรคตาบอดสี</p>
-  </div>
-</div>
-<br>
-<div class="card ">
-  <div class="card-body">
-    <h5>1. ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image1.jpg" width="240" height="240"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q1" value="8">  8<br>
-      <input type="radio" name="q1" value="7">  7<br>
-      <input type="radio" name="q1" value="9">  9<br>
-      <input type="radio" name="q1" value="6">  6<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="card">
-  <div class="card-body">
-      <h5>2. ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image2.jpg" width="240" height="240"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q2" value="1">  1<br>
-      <input type="radio" name="q2" value="8">  8<br>
-      <input type="radio" name="q2" value="9">  9<br>
-      <input type="radio" name="q2" value="6">  6<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="card">
-  <div class="card-body">
-  <h5>3. .ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image3.jpg" width="245" height="245"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q3" value="18">  18<br>
-      <input type="radio" name="q3" value="26">  26<br>
-      <input type="radio" name="q3" value="33">  33<br>
-      <input type="radio" name="q3" value="35">  35<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="card">
-  <div class="card-body">
-  <h5>4. ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image4.jpg" width="230" height="230"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q4" value="75">  75<br>
-      <input type="radio" name="q4" value="26">  26<br>
-      <input type="radio" name="q4" value="15">  15<br>
-      <input type="radio" name="q4" value="12">  12<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="card">
-  <div class="card-body">
- <h5>5. ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image5.jpg" width="230" height="230"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q5" value="8">  8<br>
-      <input type="radio" name="q5" value="6">  6<br>
-      <input type="radio" name="q5" value="3">  3<br>
-      <input type="radio" name="q5" value="2">  2<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="card">
-  <div class="card-body">
-<h5>6. ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image6.jpg" width="240" height="240"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q6" value="46">  46<br>
-      <input type="radio" name="q6" value="73">  73<br>
-      <input type="radio" name="q6" value="13">  13<br>
-      <input type="radio" name="q6" value="31">  31<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="card">
-  <div class="card-body">
-  <h5>7. ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image7.jpg" width="240" height="240"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q7" value="34">  34<br>
-      <input type="radio" name="q7" value="7">  7<br>
-      <input type="radio" name="q7" value="6">  6<br>
-      <input type="radio" name="q7" value="5">  5<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="card">
-  <div class="card-body">
-  <h5>8. ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image8.jpg" width="240" height="240"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q8" value="16">  16<br>
-      <input type="radio" name="q8" value="42">  42<br>
-      <input type="radio" name="q8" value="1">  1<br>
-      <input type="radio" name="q8" value="2">  2<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="card">
-  <div class="card-body">
-  <h5>9. ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image9.jpg" width="240" height="240"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q9" value="55">  55<br>
-      <input type="radio" name="q9" value="12">  12<br>
-      <input type="radio" name="q9" value="45">  45<br>
-      <input type="radio" name="q9" value="32">  32<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="card">
-  <div class="card-body">
-  <h5>10. ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image10.jpg" width="240" height="240"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q10" value="12">  12<br>
-      <input type="radio" name="q10" value="79">  79<br>
-      <input type="radio" name="q10" value="10">  10<br>
-      <input type="radio" name="q10" value="24">  24<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="card">
-  <div class="card-body">
-  <h5>11. ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image11.jpg" width="240" height="240"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q11" value="16">  16<br>
-      <input type="radio" name="q11" value="29">  29<br>
-      <input type="radio" name="q11" value="38">  38<br>
-      <input type="radio" name="q11" value="42">  42<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="card">
-  <div class="card-body">
- <h5>12. ดูภาพต่อไปนี้แล้วตอบคำถาม</h5><br>
-<img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image12.jpg" width="240" height="240"><br>
-    <p class="fs-5 card-text">
-      <input type="radio" name="q12" value="8">  8<br>
-      <input type="radio" name="q12" value="36">  36<br>
-      <input type="radio" name="q12" value="0">  0<br>
-      <input type="radio" name="q12" value="12">  12<br
-    </p>
-  </div>
-</div>
-<br>
-<div class="text-center">
- <input type="button" class="btn btn-dark btn-lg" value="ตรวจคำตอบ" onClick="getScore(this.form)">
-
-<input type="reset" class="btn btn-dark btn-lg" value="ลบคำตอบ"> </p>
-
-<p> คะแนนที่ได้<br>
-<input class="bgclr text-center" type="text" size="24" name="percentage" disabled>
-<br>
-เฉลย
-<br>
-<textarea class="bgclr" name="solutions" wrap="virtual" rows="5" cols="28" disabled></textarea>
+  <div class="shadow p-4 mb-5 bg-body rounded text-center">
  
-</p>
-</div>
-</div>
+    <h2 class="fw-bold">แบบทดสอบ</h2>
 
-  
-<section class="">
 
-  <footer class=" text-white text-center">
-    <div class="container p-4">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-start">
-          <h5 class="text-uppercase" id="p-1">About us</h5>
+        <div class="card text-white bg-dark d-none" id="result" >
+          <br>
+          <h5 class="center">คุณ<u>ไม่มี</u>ความเสี่ยงเป็นโรคตาบอดสี <span class="teal-text marks">0</span> เปอร์เซ็นต์</h5>
+          <br>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Siwakorn Sosanui</h5>
+        <br>
+        <div  style="text-align: center;">
+          <form class="qns-form">
 
-          <ul class="list-unstyled mb-0 text-start">
-            <li>
-              <span class="fas fa-phone-alt">  &nbsp; 0654039384</span>
-            </li>
-            <li>
-             <span class="fas fa-envelope">  &nbsp; 62209010034@htc.ac.th</span>
-            </li>
-          </ul>
+      <div class="question">
+      <div class="row row-cols-1 row-cols-md-2 g-3 mb-3">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image1.jpg" width="240" height="240"></h5><hr>
+              <p class="card-text fw-bold">คุณเห็นเป็นเลขอะไร ?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn1" value="A">
+                <label class="form-check-label fs-5" >8</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn1" value="B">
+                <label class="form-check-label fs-5">7</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn1" value="C">
+                <label class="form-check-label fs-5">9</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn1" value="D">
+                <label class="form-check-label fs-5">6</label>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="col-sm-6 ">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image2.jpg" width="240" height="240"></h5><hr>
+              <p class="card-text fw-bold">คุณเห็นเป็นเลขอะไร ?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn2" value="A">
+                <label class="form-check-label fs-5" >1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn2" value="B">
+                <label class="form-check-label fs-5">8</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn2" value="C">
+                <label class="form-check-label fs-5">9</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn2" value="D">
+                <label class="form-check-label fs-5">6</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+        
+      <div class="question">
+
+      <div class="row row-cols-1 row-cols-md-2 g-3 mb-3">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image3.jpg" width="240" height="240"></h5><hr>
+              <p class="card-text fw-bold">คุณเห็นเป็นเลขอะไร ?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn3" value="A">
+                <label class="form-check-label fs-5" >75</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn3" value="B">
+                <label class="form-check-label fs-5">26</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn3" value="C">
+                <label class="form-check-label fs-5">15</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn3" value="D">
+                <label class="form-check-label fs-5">12</label>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image4.jpg" width="240" height="240"></h5><hr>
+              <p class="card-text fw-bold">คุณเห็นเป็นเลขอะไร ?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn4" value="A">
+                <label class="form-check-label fs-5" >75</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn4" value="B">
+                <label class="form-check-label fs-5">26</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn4" value="C">
+                <label class="form-check-label fs-5">15</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn4" value="D">
+                <label class="form-check-label fs-5">12</label>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Satariya Kawyasri</h5>
+        </div>
 
-          <ul class="list-unstyled mb-0 text-start">
-            <li>
-              <span class="fas fa-phone-alt">  &nbsp; 0980230995</span>
-            </li>
-            <li>
-             <span class="fas fa-envelope">  &nbsp; 62209010037@htc.ac.th</span>
-            </li>
-          </ul>
+            <div class="question">
+
+      <div class="row row-cols-1 row-cols-md-2 g-3 mb-3">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image5.jpg" width="240" height="240"></h5><hr>
+              <p class="card-text fw-bold">คุณเห็นเป็นเลขอะไร ?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn5" value="A">
+                <label class="form-check-label fs-5" >8</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn5" value="B">
+                <label class="form-check-label fs-5">6</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn5" value="C">
+                <label class="form-check-label fs-5">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn5" value="D">
+                <label class="form-check-label fs-5">2</label>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image6.jpg" width="240" height="240"></h5><hr>
+              <p class="card-text fw-bold">คุณเห็นเป็นเลขอะไร ?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn6" value="A">
+                <label class="form-check-label fs-5" >46</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn6" value="B">
+                <label class="form-check-label fs-5">73</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn6" value="C">
+                <label class="form-check-label fs-5">13</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn6" value="D">
+                <label class="form-check-label fs-5">31</label>
+              </div>
+            </div>
+          </div>
+        </div>
+            </div>
+
+
+      <div class="question">
+
+      <div class="row row-cols-1 row-cols-md-2 g-3 mb-3">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image7.jpg" width="240" height="240"></h5><hr>
+              <p class="card-text fw-bold">คุณเห็นเป็นเลขอะไร ?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn7" value="A">
+                <label class="form-check-label fs-5" >34</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn7" value="B">
+                <label class="form-check-label fs-5">7</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn7" value="C">
+                <label class="form-check-label fs-5">6</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn7" value="D">
+                <label class="form-check-label fs-5">5</label>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image8.jpg" width="240" height="240"></h5><hr>
+              <p class="card-text fw-bold">คุณเห็นเป็นเลขอะไร ?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn8" value="A">
+                <label class="form-check-label fs-5" >16</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn8" value="B">
+                <label class="form-check-label fs-5">42</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn8" value="C">
+                <label class="form-check-label fs-5">1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn8" value="D">
+                <label class="form-check-label fs-5">2</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+              <div class="question">
+
+      <div class="row row-cols-1 row-cols-md-2 g-3 mb-3">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image9.jpg" width="240" height="240"></h5><hr>
+              <p class="card-text fw-bold">คุณเห็นเป็นเลขอะไร ?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn9" value="A">
+                <label class="form-check-label fs-5" >55</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn9" value="B">
+                <label class="form-check-label fs-5">12</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn9" value="C">
+                <label class="form-check-label fs-5">45</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn9" value="D">
+                <label class="form-check-label fs-5">32</label>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://cdn-beaai.nitrocdn.com/DsHNrqyidSdrnEUwxpnDFmLjguAlTfrt/assets/static/optimized/rev-f639137/wp-content/uploads/2015/08/colorblind-test-image10.jpg" width="240" height="240"></h5><hr>
+              <p class="card-text fw-bold">คุณเห็นเป็นเลขอะไร ?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn10" value="A">
+                <label class="form-check-label fs-5" >12</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn10" value="B">
+                <label class="form-check-label fs-5">79</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn10" value="C">
+                <label class="form-check-label fs-5">10</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="qn10" value="D">
+                <label class="form-check-label fs-5">24</label>
+              </div>
+            </div>
+          </div>
+        </div>
+            </div>
+        
+
+
+            <button class="btn btn-dark btn-lg">ตรวจคำตอบ</button>
+          </form>
+          <div class="clearfix"></div>
         </div>
       </div>
+
+      <div class="col l3 s12"></div>
+
     </div>
-
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      <a class="text-white fs-5" href="http://www.htc.ac.th/webroot59/">Hatyai Technical College</a>
-    </div>
-  </footer>
-</section>
-
-
-<script src="js/bootstrap.min.js"></script>
+  </div>
  
+  
+
+  
+ <script src="js/bootstrap.min.js"></script>
+  <script src="app/app.js"></script>
 </body>
+
 </html>
