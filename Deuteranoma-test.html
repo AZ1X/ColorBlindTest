@@ -13,7 +13,7 @@
   
     <!-- Begin
     // ใส่จำนวนข้อของแบบทดสอบ (ถ้าจะเพิ่มข้อต้องแก้ที่ตัวเลขด้านล่างด้วย)
-    var numQues = 38;
+    var numQues = 36;
   
     // ใส่จำนวนตัวเลือกใน 1 ข้อ (ถ้าจะเพิ่มจำนวนตัวเลือกต้องแก้ที่ตัวเลขด้านล่างด้วย)
     var numChoi = 3;
@@ -23,44 +23,42 @@
     // ใส่คำตอบที่ถูกต้องด้านล่างนี้ (เวลาจะเฉลยข้อไหน ก็เอาคำตอบมาใส่ข้างล่างนี้เลย)
     // ถ้าเพิ่มจำนวนข้อ บรรทัดด้านล่างต้องเพิ่มเข้าด้วย โดยตัวเลขหลัง answer คือเลขประจำข้อ เช่น ถ้าข้อ 1 ใส่ 0 , ข้อ 2 ใส่ 1 , ข้อ 3 ใส่ 2
   
-answers[0] = "เส้นเดี่ยว";
-answers[1] = "12";
-answers[2] = "8";
-answers[3] = "6";
-answers[4] = "29";
-answers[5] = "57";
-answers[6] = "5";
-answers[7] = "3";
-answers[8] = "15";
-answers[9] = "74";
-answers[10] = "2";
-answers[11] = "6";
-answers[12] = "97";
-answers[13] = "45";
-answers[14] = "5";
-answers[15] = "7";
-answers[16] = "16";
-answers[17] = "73";
-answers[18] = "ไม่ทราบ";
-answers[19] = "ไม่ทราบ";
-answers[20] = "ไม่ทราบ";
-answers[21] = "ไม่ทราบ";
-answers[22] = "26";
-answers[23] = "42";
-answers[24] = "35";
-answers[25] = "96";
-answers[26] = "เส้นแดงและม่วง";
-answers[27] = "เส้นแดงและม่วง";
+answers[0] = "3";
+answers[1] = "5";
+answers[2] = "70";
+answers[3] = "35";
+answers[4] = "2";
+answers[5] = "5";
+answers[6] = "17";
+answers[7] = "21";
+answers[8] = "ไม่เห็นอะไรเลย";
+answers[9] = "ไม่เห็นอะไรเลย";
+answers[10] = "ไม่เห็นอะไรเลย";
+answers[11] = "ไม่ทราบ";
+answers[12] = "ไม่เห็นอะไรเลย";
+answers[13] = "ไม่เห็นอะไรเลย";
+answers[14] = "ไม่เห็นอะไรเลย";
+answers[15] = "ไม่เห็นอะไรเลย";
+answers[16] = "5";
+answers[17] = "2";
+answers[18] = "45";
+answers[19] = "73";
+answers[20] = "2"; // 23
+answers[21] = "4"; // 24
+answers[22] = "3"; // 25
+answers[23] = "9"; // 26
+answers[24] = "เส้นแดง"; // 27
+answers[25] = "เส้นแดง"; // 28
+answers[26] = "เส้นเดี่ยว"; 
+answers[27] = "เส้นเดี่ยว";
 answers[28] = "ไม่ทราบ";
 answers[29] = "ไม่ทราบ";
-answers[30] = "เส้นเขียว";
-answers[31] = "เส้นเขียว";
-answers[32] = "เส้นส้ม";
-answers[33] = "เส้นส้ม";
-answers[34] = "เส้นเขียว";
-answers[35] = "เส้นเขียว";
-answers[36] = "เส้นส้ม";
-answers[37] = "เส้นส้ม";
+answers[30] = "ไม่ทราบ";
+answers[31] = "ไม่ทราบ";
+answers[32] = "เส้นแดง";
+answers[33] = "เส้นน้ำเงิน";
+answers[34] = "เส้นน้ำเงิน";
+answers[35] = "เส้นน้ำเงิน";
 
   
     // Do not change anything below here ...
@@ -83,7 +81,7 @@ answers[37] = "เส้นส้ม";
         }
       }
       score = Math.round(score / numQues * 100);
-  form.percentage.value ="คุณมีความปกติของสายตา " + score + " %";
+  form.percentage.value ="คุณมีความเสี่ยงเป็นโรคตาบอดสีเขียว " + score + " %";
   
 
   
@@ -138,13 +136,13 @@ answers[37] = "เส้นส้ม";
         <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">แบบทดสอบ</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item active" href="Test.html">ความปกติของสายตา</a></li>
+                      <li><a class="dropdown-item" href="Test.html">ความปกติของสายตา</a></li>
                       <li><a class="dropdown-item" href="Protanopi-test.html">ความเสี่ยงเป็นโรคตาบอดสีแดง</a></li>
-                      <li><a class="dropdown-item" href="Deuteranoma-test.html">ความเสี่ยงเป็นโรคตาบอดสีเขียว</a></li>
+                      <li><a class="dropdown-item active" href="Deuteranoma-test.html">ความเสี่ยงเป็นโรคตาบอดสีเขียว</a></li>
                     </ul>
                   </li>
           <li class="nav-item">
-            <a class="nav-link " href="from.html">ประเมินเว็บไซต์</a>
+            <a class="nav-link" href="from.html">ประเมินเว็บไซต์</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#p-1">เกี่ยวกับ</a>
@@ -160,55 +158,11 @@ answers[37] = "เส้นส้ม";
            <div class="col g-3 mb-3">
              <div class="card">
                <div class="card-body shadow">
-                       <h2 class="fw-bold">แบบทดสอบ</h2>
+                       <h2 class="fw-bold">แบบทดสอบตาบอดสีเขียว</h2>
+                    <p style="color:Gray;">* กรุณาทำแบบทดสอบให้ครบทุกข้อ</p>
                </div>
              </div>
            </div>
-      <div class="row row-cols-1 row-cols-md-2 g-3 mb-3">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body shadow">
-              <h5 class="card-title"><img src="image/Ishihara-Plate/1.jpg" width="240" height="240"></h5>
-              <hr>
-              <p class="card-text fw-bold">คุณเห็นอะไร ?</p>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="qn1" value="เส้นเดี่ยว">
-                <label class="form-check-label fs-5">เส้นเดี่ยว</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="qn1" value="เส้นคู่">
-                <label class="form-check-label fs-5">เส้นคู่</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="qn1" value="ไม่ทราบ">
-                <label class="form-check-label fs-5">ไม่ทราบ</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 ">
-          <div class="card">
-            <div class="card-body shadow">
-              <h5 class="card-title"><img src="image/Ishihara-Plate/2.jpg" width="240" height="240"></h5>
-             <hr>
-             <p class="card-text fw-bold">คุณเห็นอะไร ?</p>
-             <div class="form-check form-check-inline">
-             <input class="form-check-input" type="radio" name="qn2" value="12">
-             <label class="form-check-label fs-5">12</label></label>
-             </div>
-             <div class="form-check form-check-inline">
-             <input class="form-check-input" type="radio" name="qn2" value="10">
-             <label class="form-check-label fs-5">10</label>
-             </div>
-             <div class="form-check form-check-inline">
-             <input class="form-check-input" type="radio" name="qn2" value="18">
-              <label class="form-check-label fs-5">18</label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
             <div class="row row-cols-1 row-cols-md-2 g-3 mb-3">
               <div class="col-sm-6">
                 <div class="card">
@@ -984,7 +938,7 @@ answers[37] = "เส้นส้ม";
                       <hr>
                       <p class="card-text fw-bold">คุณเห็นอะไร ?</p>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="qn37" value="เส้นน้ำเงิน-เขียวและม่วง">
+                        <input class="form-check-input" type="radio" name="qn37" value="เส้นน้ำเงิน">
                         <label class="form-check-label fs-5">เส้นน้ำเงิน</label>
                       </div>
                       <div class="form-check form-check-inline">
@@ -1009,7 +963,7 @@ answers[37] = "เส้นส้ม";
                         <label class="form-check-label fs-5">เส้นส้ม</label></label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="qn38" value="เส้นน้ำเงิน-เขียวและม่วง">
+                        <input class="form-check-input" type="radio" name="qn38" value="เส้นน้ำเงิน">
                         <label class="form-check-label fs-5">เส้นน้ำเงิน</label>
                       </div>
                       <div class="form-check form-check-inline">
@@ -1033,9 +987,10 @@ answers[37] = "เส้นส้ม";
      <hr>
      <h5>ผลลัพธ์</h5>
      <div class="d-grid gap-2">
-    <input class=" text-center mb-3 " style="font-size: 22px; background: white; border: white; color: Black;" type="text" name="percentage" disabled></input>
-          </div>
-     <p style="color:Gray;">* ถ้าผลลัพธ์ออกมาไม่ได้ 100 เปอร์เซ็นต์ท่านสามารถทำเเบบทดสอบเเยกสีได้ <a href="separate.html">ที่นี่</a></p>
+     <input class=" text-center mb-3 "style="font-size: 22px; background: white; border: white; color: Black;"type="text" name="percentage" disabled></input> 
+     </div>
+      <p style="color:Gray;">* ถ้าท่านมีความเสี่ยงเป็นโรคตาบอดสีเขียวมากกว่า 0 เปอร์เซ็นต์
+      <br> ท่านสามารถเข้ารับการตรวจกับโรงพยาบาลใกล้บ้านท่านได้หรือศึกษาข้อมูลเกี่ยวกับโรคตาบอดสีเขียวคลิก <a href="Deuteranoma.html">ที่นี่</a></p>
      <label class="mb-3" name="solutions" wrap="virtual" rows="8" cols="26" disabled></label>
     </div>
        </div>

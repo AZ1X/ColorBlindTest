@@ -26,11 +26,11 @@
           <a class="nav-link" aria-current="page" href="index.html">หน้าหลัก</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">การมองเห็นของคนตาบอดสี
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">การมองเห็นของคนตาบอดสี
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="Deuteranoma.html">ตาบอดสีเขียว</a></li>
-            <li><a class="dropdown-item active" href="Protanopi.html">ตาบอดสีแดง</a></li>
+            <li><a class="dropdown-item" href="Protanopi.html">ตาบอดสีแดง</a></li>
             <li><a class="dropdown-item" href="Tritanopia.html">ตาบอดสีน้ำเงิน</a></li>
             <li><a class="dropdown-item" href="Totalcolorblindness.html">ตาบอดทุกสี</a></li>
           </ul>
@@ -44,7 +44,7 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">แบบทดสอบ</a>
+                  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">แบบทดสอบ</a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="Test.html">ความปกติของสายตา</a></li>
                     <li><a class="dropdown-item" href="Protanopi-test.html">ความเสี่ยงเป็นโรคตาบอดสีแดง</a></li>
@@ -62,17 +62,48 @@
   </div>
 </nav>
 
-<div class="shadow p-4 mb-5 bg-body rounded text-center">
-<div class="card">
-<img src="image/color_2.jpg" style="display:block; margin-left:auto; margin-right:auto; width:mw; height:250px; object-fit:contain;px" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h3 class="fw-bold card-title">ตาบอดสีแดง หรือ Protanop</h3>
-    <p class="fs-5 card-text">เป็นภาวะตาบอดสีที่เกิดจากเซลล์รูปกรวยที่ไวต่อสีแดงขาดหายไป ทำให้มองเห็นสีแดงเป็นสีดำ, สีเขียวเข้ม ส้มเข้ม และแดงเข้ม เป็นสีน้ำตาลเข้ม, สีแดง ม่วง ชมพูเข้ม เป็นสีน้ำเงิน และสีส้มเป็นสีเขียว เป็นตาบอดสีที่พบได้น้อยมาก พบในผู้ชายเพียงแค่ 1% เท่านั้น  จะมองเห็นสีเขียวและแดงเพี้ยนไป ส่วนการมองเห็นสีฟ้าและสีเหลืองสามารถมองเห็นสีได้ตามปกติ<p>
-    <a href="index.html" class="btn btn-dark btn-lg">หน้าหลัก</a>
-  </div>
-</div>
-</div>
-<section class="">
+
+    <div class="shadow p-4 mb-3 bg-body rounded text-center">
+           <div class="col g-3 mb-3">
+             <div class="card">
+               <div class="card-body shadow">
+                       <h2 class="fw-bold">เลือกแบบทดสอบแยกสี</h2>
+               </div>
+             </div>
+           </div>
+      <div class="row row-cols-1 row-cols-md-2 g-3 mb-3">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body shadow">
+              <h5 class="card-title"><img src="image/Red.png" width="240" height="240"></h5>
+              <br>
+              <h2 class="card-text fw-bold">แบบทดสอบตาบอดสีแดง</h2>
+              <p style="color:Gray;">หาเปอร์เซ็นต์ความเสี่ยงเป็นโรคตาบอดสีแดง ! </p>
+              <div class="d-grid gap-2">
+              <a class="btn btn-dark btn-lg" href="Protanopi-test.html"  type="button"> เริ่มทำแบบทดสอบ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 ">
+          <div class="card">
+            <div class="card-body shadow">
+              <h5 class="card-title"><img src="image/Green.png" width="240" height="240"></h5>
+              <br>
+              <h2 class="card-text fw-bold">แบบทดสอบตาบอดสีเขียว</h2>
+              <p style="color:Gray;">หาเปอร์เซ็นต์ความเสี่ยงเป็นโรคตาบอดสีเขียว ! </p>
+              <div class="d-grid gap-2">
+              <a class="btn btn-dark btn-lg" href="Deuteranoma-test.html" type="button"> เริ่มทำแบบทดสอบ</a>
+              </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+    
+    
+    <section class="">
 
   <footer class=" text-white text-center">
     <div class="container p-4">
@@ -113,7 +144,7 @@
     </div>
   </footer>
 </section>
-
+  
   <script src="js/bootstrap.min.js"></script>
  
 </body>
